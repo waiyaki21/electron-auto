@@ -1,0 +1,35 @@
+{
+  "name": "electron-auto",
+  "version": "1.0.0",
+  "description": "an app to test electron-auto update",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "autoUpdate"
+  ],
+  "author": "Kelvin Waiyaki",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-log": "^5.2.2",
+    "electron-updater": "^6.3.9"
+  },
+  "build": {
+        "appId": "com.waiyaki21.electron-auto",
+        "productName": "Electron Auto",
+        "extends": null,
+        "publish": [
+            {
+                "provider": "github",
+                "owner": "waiyaki21",
+                "repo": "electron-auto"
+            }
+        ]
+    }
+}
